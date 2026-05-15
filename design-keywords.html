@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>디자인 키워드 상세페이지</title>
+  <style>
+    @font-face {
+      font-family: "LeeSeoyun";
+      src: url("./이서윤체.ttf") format("truetype");
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    :root {
+      --sunny: #fff9c8;
+      --paper: #fafafa;
+      --violet: #856b8a;
+      --violet-deep: #5e4863;
+      --ink: #3f3542;
+      --line: rgba(133, 107, 138, 0.16);
+      --shadow: 0 24px 80px rgba(133, 107, 138, 0.16);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "LeeSeoyun", "Malgun Gothic", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(255, 249, 200, 0.95), transparent 30%),
+        radial-gradient(circle at right top, rgba(133, 107, 138, 0.18), transparent 24%),
+        linear-gradient(135deg, #fffdf3 0%, #fafafa 52%, #f4eef6 100%);
+    }
+
+    .page {
+      width: min(1120px, calc(100% - 24px));
+      margin: 16px auto;
+      padding: clamp(18px, 3vw, 28px);
+      border-radius: 32px;
+      background: rgba(250, 250, 250, 0.84);
+      border: 1px solid rgba(255, 255, 255, 0.65);
+      box-shadow: var(--shadow);
+    }
+
+    .topbar,
+    .keyword-grid {
+      display: grid;
+    }
+
+    .topbar {
+      grid-template-columns: repeat(2, max-content);
+      justify-content: space-between;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .back-link,
+    .badge,
+    .eyebrow {
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .back-link,
+    .badge {
+      display: inline-flex;
+      min-height: 44px;
+      padding: 10px 16px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      text-decoration: none;
+    }
+
+    .back-link {
+      background: rgba(133, 107, 138, 0.08);
+      color: var(--violet-deep);
+    }
+
+    .badge {
+      background: var(--violet);
+      color: #fff;
+    }
+
+    .hero,
+    .panel {
+      margin-top: 22px;
+      padding: clamp(20px, 4vw, 32px);
+      border-radius: 28px;
+      background: rgba(250, 250, 250, 0.8);
+      border: 1px solid var(--line);
+      box-shadow: 0 14px 40px rgba(133, 107, 138, 0.08);
+    }
+
+    .hero {
+      background: linear-gradient(135deg, rgba(255, 249, 200, 0.66), rgba(250, 250, 250, 0.92));
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin: 0 0 12px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(133, 107, 138, 0.08);
+      color: var(--violet-deep);
+      font-size: 0.74rem;
+    }
+
+    h1, h2, h3, p {
+      margin-top: 0;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 4rem);
+      line-height: 1.1;
+      margin-bottom: 14px;
+    }
+
+    h2 {
+      font-size: clamp(1.5rem, 3vw, 2.4rem);
+      margin-bottom: 16px;
+    }
+
+    p, li {
+      font-size: clamp(1rem, 1.5vw, 1.08rem);
+      line-height: 1.8;
+    }
+
+    .keyword-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .keyword-card {
+      padding: 22px;
+      border-radius: 24px;
+      background: rgba(250, 250, 250, 0.95);
+      border: 1px solid var(--line);
+    }
+
+    .keyword-number {
+      display: inline-flex;
+      width: 42px;
+      height: 42px;
+      margin-bottom: 14px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: var(--violet);
+      color: #fff;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    li + li {
+      margin-top: 10px;
+    }
+
+    @media (max-width: 900px) {
+      .keyword-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .topbar {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="topbar">
+      <a class="back-link" href="codex.html">메인으로 돌아가기</a>
+      <span class="badge">Keyword Detail</span>
+    </div>
+
+    <section class="hero">
+      <p class="eyebrow">Design Keywords</p>
+      <h1>밝음, 깔끔함, 창의성이 이어지는 디자인 키워드</h1>
+      <p>
+        이 웹사이트는 단순히 정보를 나열하는 페이지가 아니라, 나의 분위기와 디자인 취향을 함께 전달하는 공간으로 구성했습니다.
+        아래 키워드는 그 방향을 가장 잘 보여주는 핵심 기준입니다.
+      </p>
+    </section>
+
+    <section class="panel">
+      <h2>핵심 키워드 3가지</h2>
+      <div class="keyword-grid">
+        <article class="keyword-card">
+          <span class="keyword-number">1</span>
+          <h3>희망찬 분위기</h3>
+          <p>노랑 계열의 밝은 무드를 통해 긍정적이고 명량한 인상을 강조했습니다.</p>
+          <ul>
+            <li>첫 화면에서 가볍고 따뜻한 감정을 전달</li>
+            <li>프로필 이미지와 슬로건의 밝은 이미지 강화</li>
+            <li>활동적이고 성장 지향적인 성격 표현</li>
+          </ul>
+        </article>
+
+        <article class="keyword-card">
+          <span class="keyword-number">2</span>
+          <h3>깔끔한 구조</h3>
+          <p>화이트 기반의 정돈된 레이아웃으로 읽기 쉬운 페이지 구성을 만들었습니다.</p>
+          <ul>
+            <li>섹션별 정보 구분이 분명한 카드 레이아웃 사용</li>
+            <li>불필요한 장식을 줄이고 내용 전달에 집중</li>
+            <li>모바일에서도 자연스럽게 읽히는 구조 유지</li>
+          </ul>
+        </article>
+
+        <article class="keyword-card">
+          <span class="keyword-number">3</span>
+          <h3>창의적 포인트</h3>
+          <p>보라 계열 포인트 컬러를 사용해 전문성과 예술적 감각을 함께 드러냈습니다.</p>
+          <ul>
+            <li>CTA 버튼과 제목 강조에 통일된 포인트 제공</li>
+            <li>창조성과 우아함을 시각적으로 표현</li>
+            <li>전체 페이지에 깊이 있는 인상을 더하는 역할 수행</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
